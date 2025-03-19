@@ -624,7 +624,7 @@ const TabButton = ({ active, label, icon, onClick }) => (
     }`}
   >
     <span className="flex-shrink-0">{icon}</span>
-    <span className={`${active ? "font-medium" : ""} whitespace-nowrap`}>{label}</span>
+    <span className={`${active ? "font-medium" : ""} text-sm`}>{label}</span>
   </button>
 )
 
@@ -826,14 +826,14 @@ const SamparkDashboard = () => {
       <div className="flex">
         {/* Sidebar */}
         {showSidebar && (
-          <div className="w-56 bg-white shadow-md min-h-screen border-r border-gray-200">
+          <div className="w-64 bg-white shadow-md min-h-screen border-r border-gray-200">
             <div className="p-4">
               <div className="bg-orange-50 rounded-lg p-3 mb-6">
                 <div className="text-sm font-medium text-gray-900">{programData.overview.title}</div>
                 <div className="text-xs text-gray-500">{programData.overview.duration}</div>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <TabButton
                   active={activeTab === "overview"}
                   label="Program Overview"
